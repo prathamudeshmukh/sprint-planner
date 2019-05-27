@@ -8,6 +8,7 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
+import CreateSprintDialog from "./CreateSprintDialog";
 
 const styles = theme => ({
     root: {
@@ -16,8 +17,8 @@ const styles = theme => ({
     fabButton: {
         position: 'absolute',
         zIndex: 1,
-        top: 30,
-        right: 10,
+        top: 50,
+        right: 5,
         margin: '0 auto',
     },
     paper: {
@@ -28,8 +29,31 @@ const styles = theme => ({
     },
 });
 
-function DashBoard(props) {
-        const { classes } = props;
+export default class Dashboard extends React.Component{
+    constructor(props){
+        super(props);
+        this.state = { openCreateSprintDialog: false };
+        this.onAddClick = this.onAddClick.bind(this);
+        this.handleCancel = this.handleCancel.bind(this);
+        this.handleSave = this.handleSave.bind(this);
+    }
+
+    onAddClick() {
+        this.setState( { openCreateSprintDialog: true } )
+    }
+
+    handleCancel() {
+        this.setState( { openCreateSprintDialog: false } )
+    }
+
+
+    handleSave() {
+        this.setState( { openCreateSprintDialog: false } )
+    }
+
+    render() {
+        const classes = withStyles(styles);
+        console.log(classes.root);
         return <div className={classes.root}>
             <AppBar position="static" color="default">
                 <Toolbar>
@@ -38,10 +62,11 @@ function DashBoard(props) {
                     </Typography>
                 </Toolbar>
             </AppBar>
-            <Fab color="secondary" aria-label="Add" className={classes.fabButton}>
-                <AddIcon />
-            </Fab>
+
             <Grid container spacing={3}>
+                <Fab color="secondary" aria-label="Add" onClick={this.onAddClick} className={classes.fabButton}>
+                    <AddIcon />
+                </Fab>
                 <Grid item xs={2}>
                 </Grid>
                 <Grid item xs={8} alignItems={"center"} justify="center" direction="row">
@@ -52,7 +77,11 @@ function DashBoard(props) {
                 <Grid item xs={2}>
                 </Grid>
             </Grid>
-
+            <CreateSprintDialog
+                open={this.state.openCreateSprintDialog}
+                handleCancel={this.handleCancel}
+                handleSave={this.handleSave}
+            />
         </div>
+    }
 }
-export default withStyles(styles)(DashBoard);
