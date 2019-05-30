@@ -10,7 +10,7 @@ import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import CreateSprintDialog from "./CreateSprintDialog";
 
-const styles = theme => ({
+const themeStyles = ({ palette, spacing }) => ({
     root: {
         flexGrow: 1,
     },
@@ -18,18 +18,18 @@ const styles = theme => ({
         position: 'absolute',
         zIndex: 1,
         top: 50,
-        right: 5,
+        right: 15,
         margin: '0 auto',
     },
     paper: {
-        padding: theme.spacing(2),
+        padding: spacing(2),
         textAlign: 'center',
-        color: theme.palette.text.secondary,
+        color: palette.text.secondary,
         margin: 20
     },
 });
 
-export default class Dashboard extends React.Component{
+class Dashboard extends React.Component{
     constructor(props){
         super(props);
         this.state = { openCreateSprintDialog: false };
@@ -52,7 +52,7 @@ export default class Dashboard extends React.Component{
     }
 
     render() {
-        const classes = withStyles(styles);
+        const { classes } = this.props;
         console.log(classes.root);
         return <div className={classes.root}>
             <AppBar position="static" color="default">
@@ -85,3 +85,5 @@ export default class Dashboard extends React.Component{
         </div>
     }
 }
+
+export default withStyles(themeStyles)(Dashboard)
