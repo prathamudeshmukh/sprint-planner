@@ -67,15 +67,13 @@ class Dashboard extends React.Component{
                 <Fab color="secondary" aria-label="Add" onClick={this.onAddClick} className={classes.fabButton}>
                     <AddIcon />
                 </Fab>
-                <Grid item xs={2}>
-                </Grid>
-                <Grid item xs={8} alignItems={"center"} justify="center" direction="row">
+
+                <Grid item xs={12} alignItems={"center"} justify="center" direction="row">
                     <Paper className={classes.paper}>
                         <SprintPlanChart/>
                     </Paper>
                 </Grid>
-                <Grid item xs={2}>
-                </Grid>
+
             </Grid>
             <CreateSprintDialog
                 open={this.state.openCreateSprintDialog}

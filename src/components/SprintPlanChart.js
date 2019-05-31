@@ -4,7 +4,7 @@ import React from 'react';
 export default class SprintPlanChart extends React.PureComponent {
     render() {
         return <Chart
-            width={'600px'}
+            width={'1200px'}
             height={'600px'}
             chartType="Timeline"
             loader={<div>Loading Chart</div>}
@@ -15,20 +15,28 @@ export default class SprintPlanChart extends React.PureComponent {
                     { type: 'date', id: 'Start' },
                     { type: 'date', id: 'End' },
                 ],
-                [ 'Anchal',  'DOP-987',    new Date(2019, 5, 24),  new Date(2019, 5, 27) ],
-                [ 'Anchal',  'DOP-934',    new Date(2019, 5, 27), new Date(2019, 5, 28) ],
-                [ 'Anchal',  'DOP-956',   new Date(2019, 5, 28), new Date(2019, 5, 30) ],
-                [ 'Abhijeet', 'DOP-937',   new Date(2019, 5, 24), new Date(2019, 5, 25) ],
-                [ 'Abhijeet', 'DOP-946',       new Date(2019, 5, 25), new Date(2019, 5, 28) ],
-                [ 'Abhijeet', 'DOP-980',        new Date(2019, 5, 28), new Date(2019, 5, 30) ],
-                [ 'Mayank',   'DOP-273',       new Date(2019, 5, 24), new Date(2019, 5, 29)],
+                [ 'Anchal', 'DOP-627',    new Date(2019, 6, 30),  new Date(2019, 6, 30) ],
+                [ 'Anchal', 'DOP-993',    new Date(2019, 6, 31), new Date(2019, 7, 6) ],
+                [ 'Varun', 'DOP-980',   new Date(2019, 6, 30), new Date(2019, 6, 31) ],
+                [ 'Varun', 'DOP-990',   new Date(2019, 6, 31), new Date(2019, 7, 5) ],
+                [ 'Varun', 'DOP-992',       new Date(2019, 7, 6), new Date(2019, 7, 10) ],
+                [ 'Abhijeet', 'DOP-987',        new Date(2019, 6, 30), new Date(2019, 7, 5) ],
+                [ 'Abhijeet',  'DOP-1003',       new Date(2019, 7, 6), new Date(2019, 7, 7)],
+
+                [ 'Prathamesh',  'DOP-627',       new Date(2019, 6, 30), new Date(2019, 7, 4)],
+                [ 'Prathamesh',  'DOP-868',       new Date(2019, 7, 5), new Date(2019, 7, 11)],
+                [ 'Prathamesh',  'DOP-869',       new Date(2019, 7, 11), new Date(2019, 7, 13)],
+
+                [ 'Mayank',  'DOP-986',       new Date(2019, 6, 30), new Date(2019, 6, 30)],
+                [ 'Mayank',  'DOP-993',       new Date(2019, 6, 31), new Date(2019, 7, 6)],
+
             ]}
             options={{
                 timeline: { groupByRowLabel: true },
                 hAxis: {
                     format: 'd/M'
                 },
-                width: 600
+                width: 1200
             }}
             rootProps={{ 'data-testid': '1' }}
         />
