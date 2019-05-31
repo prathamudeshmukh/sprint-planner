@@ -5,7 +5,7 @@ export default class SprintPlanChart extends React.PureComponent {
     render() {
         return <Chart
             width={'1200px'}
-            height={'600px'}
+            height={'300px'}
             chartType="Timeline"
             loader={<div>Loading Chart</div>}
             data={[
