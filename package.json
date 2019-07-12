@@ -2,6 +2,7 @@
   "name": "sprint-planner",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://prathamudeshmukh.github.io/sprint-planner",
   "dependencies": {
     "@babel/core": "7.4.3",
     "@material-ui/core": "^4.0.0",
@@ -64,7 +65,9 @@
   "scripts": {
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
-    "test": "node scripts/test.js"
+    "test": "node scripts/test.js",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -133,6 +136,7 @@
   },
   "devDependencies": {
     "eslint": "^5.16.0",
-    "eslint-config-airbnb": "^17.1.0"
+    "eslint-config-airbnb": "^17.1.0",
+    "gh-pages": "^2.0.1"
   }
 }
