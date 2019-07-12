@@ -15,21 +15,17 @@ export default class SprintPlanChart extends React.PureComponent {
                     { type: 'date', id: 'Start' },
                     { type: 'date', id: 'End' },
                 ],
-                [ 'Anchal', 'DOP-627',    new Date(2019, 6, 30),  new Date(2019, 6, 30) ],
-                [ 'Anchal', 'DOP-993',    new Date(2019, 6, 31), new Date(2019, 7, 6) ],
-                [ 'Varun', 'DOP-980',   new Date(2019, 6, 30), new Date(2019, 6, 31) ],
-                [ 'Varun', 'DOP-990',   new Date(2019, 6, 31), new Date(2019, 7, 5) ],
-                [ 'Varun', 'DOP-992',       new Date(2019, 7, 6), new Date(2019, 7, 10) ],
-                [ 'Abhijeet', 'DOP-987',        new Date(2019, 6, 30), new Date(2019, 7, 5) ],
-                [ 'Abhijeet',  'DOP-1003',       new Date(2019, 7, 6), new Date(2019, 7, 7)],
-
-                [ 'Prathamesh',  'DOP-627',       new Date(2019, 6, 30), new Date(2019, 7, 4)],
-                [ 'Prathamesh',  'DOP-868',       new Date(2019, 7, 5), new Date(2019, 7, 11)],
-                [ 'Prathamesh',  'DOP-869',       new Date(2019, 7, 11), new Date(2019, 7, 13)],
-
-                [ 'Mayank',  'DOP-986',       new Date(2019, 6, 30), new Date(2019, 6, 30)],
-                [ 'Mayank',  'DOP-993',       new Date(2019, 6, 31), new Date(2019, 7, 6)],
-
+                ['Abhijit', 'DOP-1035',new Date(2019,6,11), new Date(2019,6,16) ],
+                ['Varun', 'DOP-1034',new Date(2019,6,11), new Date(2019,6,16) ],
+                ['Prathamesh', 'DOP-1038',new Date(2019,6,11), new Date(2019,6,25) ],
+                ['Prathamesh', 'DOP-1036',new Date(2019,6,15), new Date(2019,6,17) ],
+                ['Abhijit', 'DOP-1037',new Date(2019,6,17), new Date(2019,6,19) ],
+                ['Prathamesh', 'DOP-1029',new Date(2019,6,11), new Date(2019,6,12) ],
+                ['Anchal', 'DOP-1002',new Date(2019,6,11), new Date(2019,6,15) ],
+                ['Anchal', 'DOP-1000',new Date(2019,6,16), new Date(2019,6,19) ],
+                ['Varun', 'DOP-1022',new Date(2019,6,17), new Date(2019,6,19) ],
+                ['Prathamesh', 'DOP-1040',new Date(2019,6,17), new Date(2019,6,22) ],
+                ['Neha', 'DOP-1001',new Date(2019,6,11), new Date(2019,6,19) ],
             ]}
             options={{
                 timeline: { groupByRowLabel: true },
